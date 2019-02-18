@@ -1,0 +1,83 @@
+.rule{
+  width: 100%;
+  height: 495rpx;
+  margin-bottom: 100rpx;
+}
+.border{
+  border: 1rpx solid #e5e5e5;
+  margin: 8rpx 24rpx;
+  border-radius: 10rpx;
+  position: relative;
+  padding: 0 13rpx 0 28rpx;
+}
+.fc-c.fz30{
+  line-height: 45rpx;
+  padding: 15rpx 0 40rpx 0;
+  /*-webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  opacity: .2;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;*/
+}
+.fc-c text{
+  display: block;
+}
+.title{
+  line-height: 84rpx;
+  z-index: 2;
+}
+.dowm{
+  position: absolute;
+  width: 28rpx;
+  height: 24rpx;
+  background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAXBAMAAADq5DJkAAAAKlBMVEUAAACqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr9I8myAAAADXRSTlMA3RDM89ly8sicjoxj8H+h/wAAADxJREFUGNNj2HsXCdxm8EXmXmFIFUQCYQx0AyeMkUAPQy2yq64zzEXm3mRgUkICCgw0A2ihgR5Wa5G5twB0Kk7U9v6FgAAAAABJRU5ErkJggg==) no-repeat center;
+  background-size: cover;
+  right: 15rpx;
+  top: 30rpx;
+  z-index: 1;
+}
+.btn-service{
+  width: 570rpx;
+  border-radius: 10rpx;
+  margin-top: 36rpx;
+}
+.btn-service::after{
+  display: none;
+}
+.tip{
+  line-height: 28rpx;
+  padding-top: 15rpx;
+}
+.ico{
+
+}
+
+/**动画**/
+.fz30.showClass{
+  display: block;
+}
+@keyframes slidedown {
+  from {
+      transform: translateY(0);
+  }
+  to {
+      transform: translateY(100%);
+  }
+}
+.slidedown {
+    /*animation: slidedown 0.5s linear ;*/
+     -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.slideup {
+    animation: slideup 0.5s linear ;
+}
+@keyframes slideup {
+  from {
+      transform: translateY(100%);
+  }
+  to {
+      transform: translateY(0);
+  }
+}

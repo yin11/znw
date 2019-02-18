@@ -1,0 +1,21 @@
+{
+  "pages":[
+    
+    "pages/index/index", 
+    "pages/index/swiperBg/swiperBg",
+    "pages/index/form/form",
+    "pages/index/history/history",
+    "pages/index/collarRed/collarRed",
+  
+    
+    "pages/index/rule/rule"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#de1717",
+    "navigationBarTitleText": "助你旺旺",
+    "navigationBarTextStyle":"#fff"
+  }
+  
+}

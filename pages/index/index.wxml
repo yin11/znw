@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view>
+  <block wx:if="{{showAudio}}">
+    <image src='/img/misic.gif' class='misic'></image>  
+  </block>
+  <block wx:else>
+    <icon class='misic  ico-reset' bindtap='playTape'></icon>
+  </block>
+
+  
+  <image src='/img/index-bg.png' class='index-bg'></image>
+  <image src='{{item}}' class='con-bg' wx:for="{{cardList}}" wx:if="{{index == bestWishes.luckyCardType-1}}"></image>
+  <!--拆红包-->
+  <!--<image src='/img/split.gif' class='split' wx:if="{{bestWishes.userId}}"></image>-->
+  
+  <!--<navigator url='/pages/logs/logs'>录音</navigator>-->
+  <navigator class='fc-f rule' url='/pages/index/rule/rule'>游戏规则</navigator>
+  <navigator url='/pages/index/swiperBg/swiperBg' class='start btn fz32 btn-y fc-brown' >我<text wx:if='{{bestWishesId}}'>也</text>要拜年</navigator>
+  <view class='blessings fz34 fc-f' wx:if="{{bestWishesId}}">
+    <text class='to'>{{bestWishes.toTitle}}</text>
+    <text class='fz32'>{{bestWishes.wishesContent}}</text>
+    <text class='from'>——{{bestWishes.fromTitle}}</text>
+  </view>
+  
+  <view class='bottom-box' >
+    <scroll-view class='list' scroll-x="true"  wx:if="{{changeState}}">
+      <view class='item card' wx:for="{{imgLIst}}"  data-id='{{index}}' wx:for-index="i" wx:for-item="con">
+        <block wx:for="{{cardNum}}" wx:if="{{index == i}}" wx:for-item="num">
+          <image src='{{con}}' class='{{num >0 ? "on" : ""}}'></image>
+          <text class='num fc-f'  >{{num}}</text>
+        </block>
+      </view>
+    </scroll-view>
+    <view wx:else class='change'>
+      <block wx:if="{{download}}">
+        <view class='fc-f fz28 horizontally' >您已集齐5张卡，可马上兑换</view>
+        <button class='fc-brown btn-change fz30' bindtap='showExchange'>马上兑换</button>
+      </block>
+      <block>
+        <view class='fc-f fz28 horizontally' style="height:56rpx;">  </view>
+        <button class='fc-brown btn-change fz30' bindtap='showDownload'>如何领奖</button>
+      </block>
+    </view>
+  </view>
+</view>
+
+
+<!--得到一张狗卡的贝塞尔曲线-->
+<block wx:if="{{showGetCard}}">
+  <view class='mask showGetCard' >
+    <button class='btn-close' bindtap='closeGetCard'></button>
+    <image src='{{item}}' class='getCard' wx:for="{{gerCradList}}" wx:if="{{index == showCardNum}}"></image>
+  </view>
+</block>
+
+<!--集齐五张可兑换-->
+<view class='mask exchange-box' wx:if="{{showExchange}}">
+  <input type='number' maxlength='11' placeholder='输入手机号兑换购物券' class='phone fz30 fc-f' placeholder-style='color:rgba(255,255,255,.6)' bindinput='getPhone'></input>
+  <button class='btn-close' bindtap='closeExchange'></button>
+  <image src='/img/cardOver.png' class='getCard' ></image>
+  <button class='btn fz32 btn-y btn-exchange fc-brown' bindtap='exchange'>马上兑换</button>
+</view>
+
+<!--兑换成功提示-->
+<view class='mask success' wx:if="{{showSuccess}}">
+  <button class='btn-close' bindtap='colseSuccessAlert'></button>
+  <view class='success-box'>
+    <image src='/img/success-title.png' class='title'></image>
+    <view class='horizontally fz36'>{{showSuccessTxt}}</view>
+    <view class='fz32'>到各个应用市场下载<text class='fc-brown'>助商通</text>，用<text class='fc-brown'>当前微信账户</text>登入助商通，即可领取200元购物券</view>
+    <!--<button class='btn fz32 btn-y fc-brown' bindtap=''>下载助商通领取购物券</button>-->
+  </view>
+</view>

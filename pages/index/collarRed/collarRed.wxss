@@ -1,0 +1,93 @@
+
+
+page{
+  background: #e22020;
+}
+.rule{
+  position: fixed;
+  right: 18rpx;
+  top: 22rpx;
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: rgba(0, 0, 0, .3);
+  padding: 0 22rpx;
+  border-radius: 50rpx;
+}
+.start{
+  width: 308rpx;
+  margin: 60rpx auto 45rpx;
+}
+.con-bg{
+  height:570rpx;
+  width:475rpx;
+  display: block;
+  margin: 288rpx auto 0;
+}
+.blessings{
+  background: rgba(0, 0, 0, .1);
+  line-height: 48rpx;
+  margin: 20rpx 50rpx 110rpx 50rpx;
+  position: relative;
+  padding: 10rpx 40rpx;
+}
+.blessings::before,.blessings::after{
+  content: "";
+  width: 26rpx;
+  height: 20rpx;
+  display: block;
+  position: absolute;
+}
+.blessings::before{
+  background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASBAMAAACzwgOtAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////87TQQwAAAAD3RSTlMAd7uqmUTuVd0zIhFmzIhzD0HZAAAApElEQVQI1yWOSw4BYRCE22MSCQuzsJa4wHACkzgAWytuwA24gYlD2HITbsARPCZmgqT0908vOlVd3dVl1D6ZmbUHRSDXp7eGtuCaft436kIOWvrWSifIVCnyCxxJmdlR4b6u0vuYXS4fQU4hO32QtXbcEQ8WeiO0pJtZohxyxiwSZsxKsuhefcn5oqGFWUEIkjH7EowU1pcu2AfnSdzLrDmK547/dudR7VdsZb8AAAAASUVORK5CYII=) no-repeat center;
+  background-size: cover;
+  left: -15rpx;
+  top: 0;
+}
+.blessings::after{
+  background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATBAMAAACJlYuFAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////87TQQwAAAAD3RSTlMAu5lm3SIR7jNVzIh3RKqERwdVAAAAqElEQVQI1yWOuw3CUAxFTfgGkECIPtkANoANoKRkgwcNLdmAhh42CBsENmAM2vApkEAnfn4uLB9L59pitfKtedcWjXmK3HLOCgP4iiRwVTjARgRYKswglQ6UXiwgkzq8POS8NQV2OrfgJ9KAVCG2nYNMoWe7U/C7llkE39luwVzszF//gqmHCUORvsb72qPf1oISm+KCEvEx0ZQ2F+1JacpxtNaw7cPPFWeZU2kCGORgAAAAAElFTkSuQmCC) no-repeat center;
+  background-size: cover;
+  right: -15rpx;
+  bottom: 0;
+}
+.blessings text{
+  display: inline-block;
+  width: 100%;
+}
+.blessings .fz32{
+  margin: 20rpx 0; 
+}
+.from{
+  text-align: right;
+}
+
+/**底部卡**/
+.btn-bottom {
+  line-height:100rpx;
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
+.btn-bottom .btn-f.item {
+  flex:2;
+}
+.btn-f{
+  background:linear-gradient(#a00000, #c20000);
+  color: #fff;
+}
+.btn-y{
+  position: relative;
+}
+.btn-send{
+  position: absolute;
+  width: 100%;
+  height: 100rpx;
+  background: red;
+  opacity: 0.1
+}
+
+/**音频点击再来一次**/
+.ico-reset{
+  background: rgba(0, 0, 0, .2) url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAMAAAAB8C7XAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMA8j135hkrW82/hUe1mWwzIguN3VKyfFjMAAAAwUlEQVQoz3WSWRaEIAwEkUXAfav7X3VERycy2B+8vC5IIEQJjZMqaqMMNLz51Vz0d1D0y6DlUIjL9vAnfrJGgLlBKNQCmaPGqE1gl5bkKu4rYJLkeoezsKon2UEiFQySLLgz8GCV1HBdZ4VWApl1KYIWOuWc+wM1RBWhfgNtMVUDTQ4OT4PNgQV9rMPTH869Hqiz0vgUhNRwMV0VhLtpmEf/3fdsIrb3WvvepvDO7CJCUbbCh/vHfT5Zpu+63tzf/QEe9w73bs4sDAAAAABJRU5ErkJggg==) no-repeat center;
+  background-size: 25rpx;
+}

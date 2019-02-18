@@ -1,0 +1,19 @@
+<view>
+  <image src='/img/index-bg.png' class='index-bg'></image>
+  <swiper class='swiper-box' current="{{current}}" bindchange="getCurren" >
+    <block wx:for="{{swiper}}">
+      <swiper-item >
+        <image src="{{item}}" class="slide-image" data-id='{{index}}'/>
+      </swiper-item>
+    </block>  
+  </swiper>
+  <view class='fc-f fz28 special-font name'>
+    <image src='{{item}}' wx:for="{{swiperTitle}}" wx:if="{{index == current}}"></image>
+  </view>
+  <view class='fc-f fz28 special-font tip'>左右滑动切换狗狗形象</view>
+  <view class='ico-box'>
+    <icon class='left icon'></icon>
+    <icon class='right icon'></icon>
+  </view>
+  <navigator url='/pages/index/form/form?luckyCardType={{luckyCardType}}' class='btn-y btn fz32 fc-brown'>完成</navigator>
+</view>

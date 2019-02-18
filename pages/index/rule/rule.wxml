@@ -1,0 +1,58 @@
+<view>
+  <image src='/img/rule.jpg' class='rule'></image>
+  <view class=''>
+    <view class='border'>
+      <view class='title fz32' data-id='1' bindtap='showAnswer'>1、怎么发送祝福？<icon class='dowm'  id='1'></icon></view> 
+      <view class='fz30 fc-c ' wx:if="{{curten == 1}}">首页选择我要拜年，输入需要的内容（文字、语音）即可生成新年祝福模板<!--，还可以发送新年红包-->; 可以将祝福转发给好友或群；</view>
+    </view>
+    <view class='border'>
+      <view class='title fz32' data-id='2'  bindtap='showAnswer'>2、我可以指定选择汪星人的形象吗？<icon class='dowm' id='2'></icon></view>
+      <view class='fz30 fc-c' wx:if="{{curten == 2}}">汪星人的形象是您指定的，左右滑动选择您喜欢的汪星人，共有五种单身汪，仙女汪，催婚汪，佛系汪，土豪汪.</view>
+    </view>
+    <view class='border'>
+      <view class='title fz32' data-id='3' bindtap='showAnswer'>3、如何将祝福分享到我的朋友圈？<icon class='dowm'   id='3'></icon></view>
+      <view class='fz30 fc-c' wx:if="{{curten == 3}}">将创作好的祝福，保存“分享面”图片，将“分享面”发送到朋友圈，小伙伴们通过扫码即可收到您的祝福</view>
+    </view>
+    <view class='border'>
+      <view class='title fz32 ' data-id='4' bindtap='showAnswer'>4、集卡活动是什么？怎么参加？<icon class='dowm'  id='4'></icon></view>
+      
+      <view class='fz30 fc-c' wx:if="{{curten == 4}}">恭贺新年，特推出集汪星人卡领取淘宝天猫购物券，集齐五种汪星人卡片各一张（即可兑换200元的淘宝天猫购物劵</view>
+    </view>
+    <view class='border'>
+      <view class='title fz32' data-id='5' bindtap='showAnswer'>5、汪星人卡片规则<icon class='dowm'  id='5'></icon></view>
+      
+      <view class='fz30 fc-c' wx:if="{{curten == 5}}">
+        <text>a.每天每个账号送祝福最多可以获得5张卡，获得5张后您当天将不再获得汪星人卡片；</text>
+        <text>b.祝福送给好友，并且好友打开了您的祝福，您和好友各随机获得一张汪星人卡，对方没有打开您的祝福，您是没有卡的。；</text>
+        <text>c.一个账号集齐了一套并且兑换成功后将不会再送卡，但仍然可以选择喜欢的汪星人送祝福；</text>
+        <text>d.集齐没有兑换，将在首页底端将显示“马上兑换”的弹框，不再显示汪星人卡片；</text>
+        <text>e.兑换成功后，首页底端将不再显示任何弹框；</text>
+      </view>
+    </view>
+    <view class='border'>
+      <view class='title fz32' data-id='6'bindtap='showAnswer' >6.如何领取200元淘宝天猫优惠券？<icon class='dowm' id='6'></icon></view>
+      
+      <view class='fz30 fc-c' wx:if="{{curten == 6}}">
+        <text>a.需要登录小程序的微信账号登录到助商通App，即可获得200元奖励</text>
+        <text>b.如果没有下载助商通App，需先下载助商通App，再进行上一步操作即可</text>
+      </view>
+    </view>
+    <!--<view class='border'>
+      <view class='title fz32' data-id='7' bindtap='showAnswer' >7.红包提现需要多久到账？<icon class='dowm' id='7'></icon></view>
+      
+      <view class='fz30 fc-c' wx:if="{{curten == 7}}">一般提现后即可实时到账到相关的微信账户，如遇特殊原因 ,时间最长不超过24小时</view>
+    </view>
+    <view class='border'>
+      <view class='title fz32' data-id='8' bindtap='showAnswer' >8.未被领取的红包怎样处理？<icon class='dowm' id='8'></icon></view>
+      
+      <view class='fz30 fc-c' wx:if="{{curten == 8}}">红包24小时未领取退还到您相关微信账号的余额账户,最长时间不超过72小时</view>
+    </view>
+    <view class='border'>
+      <view class='title fz32' data-id='9' bindtap='showAnswer' >9.我支付了红包没有发出去？<icon class='dowm' id='9'></icon></view>
+      
+      <view class='fz30 fc-c' wx:if="{{curten == 9}}">支付的红包没有发出去，红包金额会在24小时内退还，最长时间不超过72小时相关记录可到红包记录中查询</view>
+    </view>-->
+  </view>
+  <button class="btn btn-service btn-y fc-f" open-type="contact" session-from="weapp"><icon class='ico'></icon>联系客服</button> 
+  <view class='fc-c fz24 horizontally tip'>助你旺旺由腾朝互联开发</view>
+</view>

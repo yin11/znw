@@ -1,0 +1,45 @@
+<view>
+  <image src='/img/di.png' class='bg'></image>
+  <view class='fc-f head'>
+    <view class='horizontally'>
+      <view class='fz30'>总浏览次数</view>
+      <view class='fz48'>{{totalStatistics.openCount}}</view>
+    </view>
+    <view class='flex-box'>
+      <view class='item fz28'>新人数<text  class='fz30'>{{totalStatistics.newSum}}</text></view>
+      <view class='item fz28'>共发祝福<text  class='fz30'>{{totalStatistics.wishesCount}}</text></view>
+    </view>
+  </view>
+  <scroll-view >
+    <view class='item-con touch-item {{item.isTouchMove ? "touch-move-active" : ""}}' data-index="{{index}}" wx:for="{{historyList}}" data-id='{{item.id}}' bindtouchstart="touchstart" bindtouchmove="touchmove" bindtap='goForm' >
+      <view class='content'>
+        <view class='fc-c'>{{item.createTimeStr}}</view>
+        <view class='flex-box fz24'>
+          <view class='item'>
+            <block wx:for="{{cardList}}" wx:for-item="img" wx:for-index="i">
+              <image src='{{img}}' class='cardImg' wx:if="{{i == (item.luckyCardType-1)}}" ></image> 
+            </block>
+          </view>
+          <view class='item' data-audioUrl='{{item.audioUrl}}'>
+            <text class='ico-tape' >{{item.audioTime}}s</text>
+          </view>
+          <view class='item'>
+            <text class='ico-browse'>{{item.openCount}}</text>
+          </view>
+          <view class='item'>
+            <text class='ico-new'>{{item.newSum}}</text>
+          </view>
+        </view>
+        <view class='fz30 fc-c txt'>
+          <text >{{item.fromTitle}}<text wx:if="{{item.fromTitle}}">/</text>{{item.wishesContent}}<text wx:if="{{item.wishesContent}}">/</text>{{item.toTitle}}</text>  
+        </view>
+      </view>
+      <view class="del" catchtap="del" data-index="{{index}}" data-id='{{item.id}}'>删除</view>
+    </view>  
+  </scroll-view>
+  <!--more-->
+  <view class="weui-loadmore" hidden="{{isHideLoadMore}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</view>

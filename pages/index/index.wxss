@@ -1,0 +1,228 @@
+
+page{
+  background: #e22020;
+  width: 100%;
+}
+.rule{
+  position: fixed;
+  right: 18rpx;
+  top: 22rpx;
+  font-size: 28rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: rgba(0, 0, 0, .3);
+  padding: 0 22rpx;
+  border-radius: 50rpx;
+}
+.start{
+  width: 308rpx;
+  margin: 60rpx auto 45rpx;
+}
+.con-bg{
+  height:570rpx;
+  width:475rpx;
+  display: block;
+  margin: 288rpx auto 0;
+}
+.blessings{
+  background: rgba(0, 0, 0, .1);
+  line-height: 48rpx;
+  margin: 20rpx 50rpx;
+  position: relative;
+  padding: 10rpx 40rpx;
+}
+.blessings::before,.blessings::after{
+  content: "";
+  width: 26rpx;
+  height: 20rpx;
+  display: block;
+  position: absolute;
+}
+.blessings::before{
+  background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASBAMAAACzwgOtAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////87TQQwAAAAD3RSTlMAd7uqmUTuVd0zIhFmzIhzD0HZAAAApElEQVQI1yWOSw4BYRCE22MSCQuzsJa4wHACkzgAWytuwA24gYlD2HITbsARPCZmgqT0908vOlVd3dVl1D6ZmbUHRSDXp7eGtuCaft436kIOWvrWSifIVCnyCxxJmdlR4b6u0vuYXS4fQU4hO32QtXbcEQ8WeiO0pJtZohxyxiwSZsxKsuhefcn5oqGFWUEIkjH7EowU1pcu2AfnSdzLrDmK547/dudR7VdsZb8AAAAASUVORK5CYII=) no-repeat center;
+  background-size: cover;
+  left: -15rpx;
+  top: 0;
+}
+.blessings::after{
+  background: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATBAMAAACJlYuFAAAAMFBMVEUAAAD///////////////////////////////////////////////////////////87TQQwAAAAD3RSTlMAu5lm3SIR7jNVzIh3RKqERwdVAAAAqElEQVQI1yWOuw3CUAxFTfgGkECIPtkANoANoKRkgwcNLdmAhh42CBsENmAM2vApkEAnfn4uLB9L59pitfKtedcWjXmK3HLOCgP4iiRwVTjARgRYKswglQ6UXiwgkzq8POS8NQV2OrfgJ9KAVCG2nYNMoWe7U/C7llkE39luwVzszF//gqmHCUORvsb72qPf1oISm+KCEvEx0ZQ2F+1JacpxtNaw7cPPFWeZU2kCGORgAAAAAElFTkSuQmCC) no-repeat center;
+  background-size: cover;
+  right: -15rpx;
+  bottom: 0;
+}
+.blessings text{
+  display: inline-block;
+  width: 100%;
+}
+.blessings .fz32{
+  margin: 20rpx 0; 
+}
+.from{
+  text-align: right;
+}
+
+/**底部卡**/
+.list{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap; display: flex;
+  overflow-x: auto;
+}
+.card image{
+  width: 165rpx;
+  height: 165rpx;
+}
+.card.item image{
+  opacity: .5;
+}
+.card.item image.on{
+  opacity:1;
+}
+.card{
+  width: 165rpx;
+  padding: 0 15rpx 10rpx;
+  display: inline-block;
+  position: relative;
+}
+.num{
+  position: absolute;
+  right: 28rpx;
+  top: 45rpx;
+  font-size: 16rpx;
+  line-height: 18rpx;
+  background: #1b1b1b;
+  padding: 0 15rpx;
+  border-radius: 30rpx;
+}
+
+/**卡详情**/
+.showCardDetail{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.showCardDetail .btn-close{
+  right: 22rpx;
+  top: -110rpx;
+}
+.card-con{
+  background: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.card-con .card{
+  position: absolute;
+  left: 299rpx;
+  top: -76rpx;
+  width: 152rpx;
+  height: 152rpx;
+  padding: 0;
+  z-index: 5;
+}
+.swiper-item{
+  padding: 90rpx 36rpx 70rpx 36rpx;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.initial{
+  background: #000;
+  border-radius: 50%;
+  height: 44rpx;
+  width: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  color: #fff;
+}
+.swiper-item .fc-a3{
+  line-height: 50rpx;
+}
+.swiper-item .clearfix:last-of-type{
+  margin-bottom: 50rpx;
+}
+
+/**得到一张卡**/
+.getCard{
+  width: 530rpx;
+  height: 724rpx;
+  margin: 250rpx auto 0;
+  display: block;
+}
+.showGetCard .btn-close{
+  right: 70rpx;
+  top: 150rpx;
+}
+
+/**集齐卡兑换**/
+.bottom-box{
+  /*position: absolute;*/
+  bottom: 0;
+  width:750rpx;
+  overflow-x: hidden;
+}
+.phone{
+  
+  position: absolute;
+  width: 500rpx;
+  height: 67rpx;
+  left: 125rpx;
+  top: 380rpx;
+  padding: 0 10rpx;
+}
+.change{
+  padding-top: 34rpx;
+}
+.change .horizontally{
+  line-height: 2;
+}
+.btn-change{
+  background:linear-gradient(#ffd052, #f78c03)
+}
+.btn-change::after{
+  width: 0;
+  height: 0;
+}
+.exchange-box .btn-close{
+  right: 90rpx;
+  top: 148rpx;
+}
+.btn-exchange{
+  width: 308rpx;
+  position: absolute;
+  top: 500rpx;
+  left: 225rpx;
+}
+
+/**兑换成功**/
+.success .btn-close{
+  right: 96rpx;
+  top: 222rpx;
+}
+.success-box{
+  background: #fff;
+  width: 670rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 350rpx;
+  line-height: 2.1875;
+  padding: 0 0 60rpx 0;
+  border-radius: 15rpx;
+}
+.success-box view{
+  padding: 0 60rpx;
+}
+.success-box .btn{
+  position: relative;
+  width: 500rpx;
+  margin-top: 70rpx;
+}
+.success-box  .title{
+  width: 100%;
+  height: 106rpx;
+}
+
+/**音频点击再来一次**/
+.ico-reset{
+  background: rgba(0, 0, 0, .2) url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAeCAMAAAAB8C7XAAAAQlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////8IX9KGAAAAFXRSTlMA8j135hkrW82/hUe1mWwzIguN3VKyfFjMAAAAwUlEQVQoz3WSWRaEIAwEkUXAfav7X3VERycy2B+8vC5IIEQJjZMqaqMMNLz51Vz0d1D0y6DlUIjL9vAnfrJGgLlBKNQCmaPGqE1gl5bkKu4rYJLkeoezsKon2UEiFQySLLgz8GCV1HBdZ4VWApl1KYIWOuWc+wM1RBWhfgNtMVUDTQ4OT4PNgQV9rMPTH869Hqiz0vgUhNRwMV0VhLtpmEf/3fdsIrb3WvvepvDO7CJCUbbCh/vHfT5Zpu+63tzf/QEe9w73bs4sDAAAAABJRU5ErkJggg==) no-repeat center 7rpx;
+  background-size: 35rpx;
+}

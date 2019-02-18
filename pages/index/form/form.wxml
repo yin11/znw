@@ -1,0 +1,38 @@
+<view class='container '>
+  <navigator url='/pages/index/history/history' class='history'></navigator>
+  <view class='box'>
+    <text class='fz34 input-title'>对方称呼</text>
+    <input placeholder='如：紫薇' type='text' maxlength='10' class='input-box' bindinput="getToTitle" value='{{toTitle}}'></input>
+    <text class='fz28 fc-r tip'>选填</text>
+  </view>
+  <view class='box'>
+    <text class='fz34 input-title'>祝福落款</text>
+    <input placeholder='如：尔康' type='text' maxlength='10' class='input-box' bindinput='getFromTitle' value='{{fromTitle}}'></input>
+    <text class='fz28 fc-r tip'>选填</text>
+  </view>
+  <view class='box'>
+    <text class='fz34 input-title'>祝福语</text>
+    <textarea show-confirm-bar="" cursor-spacing="100" placeholder='请输入祝福语，祝福语不超过100字' maxlength="100" bindinput="getWishesContent" value='{{wishesContent}}'></textarea>
+    <!--<text class='fz28 fc-r tip'>选填(100字以内)</text>-->
+  </view>
+  
+  <view bindtouchstart='startTape' bindtouchend="endTape" class='tape fz28 fc-f {{tapeIco}}'><icon class='ico-mick {{tapeIco}}'></icon>{{tapeTxt}}</view>
+  <!--显示录音文件-->
+  <view class='fz24 horizontally' hidden="{{showTape}}" bindlongpress="longDeleteTape">
+    <view bindtap='tapPlayTape' >
+      <view>{{tapeTime}}</view>
+      <view  class='syllable-bg syllable' wx:if="{{play}}" ></view>
+      <block wx:else>
+        <image class='syllable' src='/img/syllable.gif' ></image>
+      </block>
+      <view class='fc-c' >点击试听，长按删除</view>
+    </view> 
+  </view>
+</view>
+<view class='flex-box btn-bottom'>
+  <!--<view class='btn-r item fc-f fz28' >点击预览后可保存发送</view>-->
+  <view class='btn-r item fc-f fz40' bindtap='setStorage'>预览</view>
+</view>
+
+
+

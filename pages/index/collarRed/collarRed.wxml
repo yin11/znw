@@ -1,0 +1,26 @@
+
+<view>
+  <block wx:if="{{showMisic}}">
+    <block wx:if="{{showAudio}}">
+      <image src='/img/misic.gif' class='misic'></image>  
+    </block>
+    <block wx:else>
+      <icon class='misic  ico-reset' bindtap='playTape'></icon>
+    </block>
+  </block>
+  
+  <image src='/img/index-bg.png' class='index-bg'></image>
+  <image src='{{item}}' class='con-bg' wx:for="{{swiper}}" wx:if="{{index == (preview.luckyCardType-1)}}"></image>
+  <navigator class='fc-f rule' url='/pages/index/rule/rule'>游戏规则</navigator>
+  
+  <view class='blessings fz34 fc-f' wx:if="{{preview.preview}}">
+    <text class='to' >{{preview.toTitle}}</text>
+    <text class='fz32'>{{preview.wishesContent}}</text>
+    <text class='from'>——{{preview.fromTitle}}</text>
+  </view>
+  
+</view>
+<view class='flex-box btn-bottom'>
+  <view class='btn-f item fc-f fz40' bindtap='submitInfo'>保存</view>
+  <view class='btn-y item fc-f fz40' ><button open-type="share" class='btn-send' ></button>发送</view>
+</view>
